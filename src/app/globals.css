@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #080808;
+  --background-elevated: #0f0f0f;
+  --surface: #141414;
+  --surface-hover: #1c1c1c;
+  --brand-red: #E11D48;
+  --brand-red-hover: #F43F5E;
+  --brand-red-muted: rgba(225, 29, 72, 0.15);
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(225, 29, 72, 0.35);
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-inter), sans-serif;
+  scroll-behavior: smooth;
+}
+
+main {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E11D48;
+}
+
+/* Hide scrollbar for clean horizontal rails */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
