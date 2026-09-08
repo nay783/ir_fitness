@@ -83,10 +83,10 @@ export const Footer: React.FC = () => {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
       />
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-white/[0.08]">
+      <div className="w-full max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left text-xs text-text-muted">
         
-        {/* Left Side: Logo + Copyright (Single flex line) */}
-        <div className="flex items-center gap-3 shrink-0 text-center md:text-left">
+        {/* Left Column (Brand & Copyright) */}
+        <div className="flex flex-col sm:flex-row items-center gap-2.5 text-center md:text-left">
           <div className="flex items-center gap-2 shrink-0">
             <div className="relative w-6 h-6 rounded-md overflow-hidden border border-brand-red/60 bg-surface shrink-0">
               <Image
@@ -102,29 +102,29 @@ export const Footer: React.FC = () => {
             </span>
           </div>
           <span className="hidden sm:inline text-text-muted/60 shrink-0">•</span>
-          <p className="text-[11px] sm:text-xs text-text-muted whitespace-nowrap font-medium">
+          <p className="text-[11px] sm:text-xs text-text-muted leading-relaxed break-words md:whitespace-nowrap font-medium">
             {isPt
               ? "© 2026 IR Fitness Gym. Todos os direitos reservados. Maputo, Moçambique."
               : "© 2026 IR Fitness Gym. All rights reserved. Maputo, Mozambique."}
           </p>
         </div>
 
-        {/* Center: Developer Credit */}
-        <div className="shrink-0 text-center text-[11px] sm:text-xs text-text-muted whitespace-nowrap font-medium">
+        {/* Middle Column (Developer Credit) */}
+        <div className="text-[11px] sm:text-xs text-text-muted hover:text-brand-red transition-colors font-medium text-center">
           <span>{isPt ? "Desenvolvido por " : "Developed by "}</span>
           <span className="font-semibold text-text-secondary hover:text-brand-red transition-colors cursor-pointer border-b border-transparent hover:border-brand-red">
             NCAI Consultorias e Serviços, EI
           </span>
         </div>
 
-        {/* Right Side: Social Handles & Back to Top Anchor */}
-        <div className="shrink-0 flex items-center gap-3 text-[11px] sm:text-xs whitespace-nowrap">
-          <div className="flex items-center gap-3 border-r border-border/60 pr-3">
+        {/* Right Column (Socials & Top Anchor) */}
+        <div className="flex flex-wrap items-center justify-center md:justify-end gap-3 text-[11px] sm:text-xs pt-2 md:pt-0">
+          <div className="flex flex-wrap items-center justify-center gap-3 border-r-0 sm:border-r border-border/60 sm:pr-3">
             <a
               href="https://www.instagram.com/ir.fitness.gym"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 hover:text-brand-red transition-colors font-mono font-medium text-[11px] sm:text-xs whitespace-nowrap"
+              className="flex items-center gap-1.5 hover:text-brand-red transition-colors font-mono font-medium text-[11px] sm:text-xs"
             >
               <Instagram className="w-3.5 h-3.5 text-brand-red shrink-0" />
               <span>@ir.fitness.gym</span>
@@ -133,7 +133,7 @@ export const Footer: React.FC = () => {
               href="https://www.instagram.com/ir_fitness_shop"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 hover:text-brand-red transition-colors font-mono font-medium text-[11px] sm:text-xs whitespace-nowrap"
+              className="flex items-center gap-1.5 hover:text-brand-red transition-colors font-mono font-medium text-[11px] sm:text-xs"
             >
               <Instagram className="w-3.5 h-3.5 text-brand-red shrink-0" />
               <span>@ir_fitness_shop</span>
@@ -142,7 +142,7 @@ export const Footer: React.FC = () => {
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-1.5 text-text-secondary hover:text-brand-red transition-colors font-medium px-2 py-1 rounded-md hover:bg-surface-muted min-h-[44px] whitespace-nowrap"
+            className="flex items-center gap-1.5 text-text-secondary hover:text-brand-red transition-colors font-medium px-2 py-1 rounded-md hover:bg-surface-muted min-h-[44px]"
           >
             <span>{isPt ? "Voltar ao Início" : "Back to Top"}</span>
             <ArrowUp className="w-3.5 h-3.5 text-brand-red shrink-0" />

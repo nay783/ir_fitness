@@ -90,11 +90,21 @@ export const EventShowcaseSection: React.FC = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="pt-2">
-                <Button href={WHATSAPP_URL} target="_blank" size="lg" variant="primary" className="w-full sm:w-auto">
-                  <Music className="w-5 h-5 mr-2" />
-                  {t.eventShowcase.cta}
+              <div className="pt-2 flex flex-col items-start gap-2 w-full sm:w-auto">
+                <Button
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  size="lg"
+                  variant="primary"
+                  className="w-full sm:w-auto h-auto min-h-[48px] py-3 px-4 text-xs sm:text-base font-bold text-center leading-tight whitespace-normal break-words sm:whitespace-nowrap justify-center"
+                >
+                  <Music className="w-5 h-5 mr-2 shrink-0" />
+                  <span className="hidden sm:inline">{t.eventShowcase.cta}</span>
+                  <span className="inline sm:hidden">Inscrever-me no Próximo Evento</span>
                 </Button>
+                <span className="text-[11px] font-mono font-semibold text-brand-red bg-brand-red-muted px-3 py-1 rounded-full border border-brand-red/20 sm:hidden self-center">
+                  500 MT / Grátis para Sócios
+                </span>
               </div>
 
             </div>
